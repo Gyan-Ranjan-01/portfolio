@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Portfolio | Gyan
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div>
+            <div class="loader"></div>
+            <p style="color: #0ff; margin-top: 1rem; font-size: 1.2rem">
+                Loading Portfolio...
+            </p>
+        </div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Gyan Ranjan | Portfolio</div>
+            <ul class="nav-links" id="navLinks">
+                <li>
+                    <a href="/" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/skills">Skills</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <%- body %>
+
+        <% if(error && error.length) { %>
+            <div id="error-popup" style="
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            z-index: 10000;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideIn 0.3s ease-out;
+        ">
+                <%= error %>
+            </div>
+
+            <script>
+                setTimeout(() => {
+                    const popup = document.getElementById('error-popup');
+                    if (popup) {
+                        popup.style.transition = 'opacity 0.5s ease';
+                        popup.style.opacity = '0';
+                        setTimeout(() => popup.remove(), 500);
+                    }
+                }, 2000);
+            </script>
+
+            <style>
+                @keyframes slideIn {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            </style>
+            <% } %>
+
+                <footer>
+                    <p>© 2025-29 Gyan Ranjan. Built with HTML, CSS & JavaScript</p>
+                </footer>
+
+                <script src="/js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<% layout("layout/boilerplate") %>
+
+    <section id="contact" class="active">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="bio">
+                I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll
+                try my best to get back to you!
+            </p>
+            <div class="contact-grid">
+                <a href="mailto:rgyan2748@gmail.com" class="contact-card">
+                    <div class="icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>rgyan2748@gmail.com</p>
+                </a>
+                <a href="https://github.com/gyan-ranjan-01" target="_blank" class="contact-card">
+                    <div class="icon">🔗</div>
+                    <h3>GitHub</h3>
+                    <p>gyan-ranjan-01</p>
+                </a>
+                <a href="https://www.linkedin.com/in/gyan-ranjan-025a611bb/" target="_blank" class="contact-card">
+                    <div class="icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <p>Gyan Ranjan</p>
+                </a>
+            </div>
+
+            <!-- Contact Form Enhancement -->
+            <div class="contact-form-container"
+                style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">Send me a Message</h3>
+                <form action="/contact" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="display: flex; gap: 1rem;">
+                        <input type="text" name="name" placeholder="Your Name" required
+                            style="flex: 1; padding: 0.8rem; border-radius: 5px; border: none; background: rgba(255, 255, 255, 0.1); color: #fff;">
+                        <input type="email" name="email" placeholder="Your Email" required
+                            style="flex: 1; padding: 0.8rem; border-radius: 5px; border: none; background: rgba(255, 255, 255, 0.1); color: #fff;">
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required
+                        style="padding: 0.8rem; border-radius: 5px; border: none; background: rgba(255, 255, 255, 0.1); color: #fff;">
+                    <textarea name="message" rows="5" placeholder="Your Message" required
+                        style="padding: 0.8rem; border-radius: 5px; border: none; background: rgba(255, 255, 255, 0.1); color: #fff; resize: vertical;"></textarea>
+                    <button type="submit" class="cta-btn"
+                        style="border: none; cursor: pointer; align-self: center;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
