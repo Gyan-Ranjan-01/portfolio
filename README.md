@@ -1,2 +1,2 @@
 # portfolio
-This is my portfolio created during December 2025
+This is my portfolio created on 22 December 2025
